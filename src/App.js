@@ -7,9 +7,10 @@ function App() {
     const script = document.createElement("script");
     script.src =
       "https://app.gaadibaazar.in/widget/chatbox/common_scripts/script.js";
-    script.async = true;
-    script.onload = () =>
-      window.loadChat360Bot("892d1954-edaa-4336-9b53-dec7b31c2964");
+    script.onload = () => {
+      // eslint-disable-next-line no-undef
+      loadChat360Bot("892d1954-edaa-4336-9b53-dec7b31c2964");
+    };
 
     document.body.appendChild(script);
   }, []);
