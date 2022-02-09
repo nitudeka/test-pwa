@@ -1,20 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://app.gaadibaazar.in/widget/chatbox/common_scripts/script.js";
-    script.onload = () => {
-      // eslint-disable-next-line no-undef
-      loadChat360Bot("892d1954-edaa-4336-9b53-dec7b31c2964");
-    };
-
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
