@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    fetch(`https://swapi.dev/api/planets/1/`)
+      .then((res) => res.json())
+      .then(console.log);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
